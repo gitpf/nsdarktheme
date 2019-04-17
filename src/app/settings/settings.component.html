@@ -1,0 +1,29 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Settings"></Label>
+
+    <NavigationButton text="Back" (tap)="navigateHome()" android.systemIcon="ic_menu_back"></NavigationButton>
+
+</ActionBar>
+
+<GridLayout [ngClass]="{'page-dark': darkTheme$ | async, 'page': true}" rows="*,*,*">
+
+    <GridLayout rows="" columns="">
+        <Switch row="0" class="m-15" checked="{{darkTheme$ | async}}" (checkedChange)="onFirstChecked($event)"></Switch>
+    </GridLayout>
+
+    <StackLayout row="1">
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+        <Label [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+    </StackLayout>
+    <Button row="2" text="go Home" (tap)="navigateHome()"></Button>
+
+
+</GridLayout>

@@ -1,0 +1,12 @@
+<ActionBar class="action-bar" title="Home Title" backgroundColor="transparent">
+
+</ActionBar>
+
+<GridLayout [ngClass]="{'page-dark': darkTheme$ | async, 'page': true}" rows="*,*,*">
+
+    <Label row="1" [ngClass]="{'heading-dark': darkTheme$ | async, 'heading': true}" text="I am a heading label" textWrap="true"></Label>
+
+
+    <Button row="2" text="Settings" (tap)="navigateSettings()"></Button>
+
+</GridLayout>
